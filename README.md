@@ -4,7 +4,7 @@ Wavetable Editor is created using Max/Msp for rendering wave table from curve fu
 
 If your are using synthesizer like serum, you can drop your rendered wave table into its oscillator sampler in pitch average mode.
 
-Current version support windows platform.
+Current version supports both windows and macos platform.
 
 - Screenshot:
 
