@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 77.0, 1536.0, 929.0 ],
+		"rect" : [ 34.0, 77.0, 1360.0, 929.0 ],
 		"openrect" : [ 0.0, 0.0, 751.0, 520.0 ],
 		"editing_bgcolor" : [ 0.090196, 0.090196, 0.090196, 1.0 ],
 		"bglocked" : 0,
@@ -40,6 +40,54 @@
 		"subpatcher_template" : "",
 		"title" : "Wavetable Editor",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-70",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 367.0, 611.0, 150.0, 20.0 ],
+					"presentation" : 1,
+					"presentation_rect" : [ 657.0, 0.0, 78.0, 20.0 ],
+					"style" : "",
+					"text" : "version 1.11",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textjustification" : 2
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-56",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 531.0, 492.0, 33.0, 22.0 ],
+					"style" : "",
+					"text" : "1.11"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 543.0, 542.0, 77.0, 22.0 ],
+					"restore" : [ 1.11 ],
+					"saved_object_attributes" : 					{
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "pattr version",
+					"varname" : "version"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-65",
 					"maxclass" : "newobj",
@@ -974,7 +1022,7 @@
 ,
 					"style" : "",
 					"text" : "pattr curve",
-					"varname" : "curve[1]"
+					"varname" : "curve"
 				}
 
 			}
@@ -986,16 +1034,16 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 379.0, 149.0, 188.0, 22.0 ],
+					"patching_rect" : [ 379.0, 149.0, 185.0, 22.0 ],
 					"saved_object_attributes" : 					{
-						"client_rect" : [ 8, 44, 963, 172 ],
+						"client_rect" : [ 1057, 45, 1440, 407 ],
 						"parameter_enable" : 0,
-						"storage_rect" : [ 583, 69, 1162, 197 ]
+						"storage_rect" : [ 583, 69, 1034, 197 ]
 					}
 ,
 					"style" : "",
-					"text" : "pattrstorage curve @savemode 0",
-					"varname" : "curve"
+					"text" : "pattrstorage table @savemode 0",
+					"varname" : "table"
 				}
 
 			}
@@ -1119,7 +1167,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1505.5, 619.0, 69.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 34, 77, 1570, 1006, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 34, 77, 1394, 1006, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
 				}
@@ -2442,6 +2490,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-56", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-58", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2609,19 +2666,19 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-23" : [ "Clear[2]", "Clear", 0 ],
-			"obj-40" : [ "Clear[6]", "Clear", 0 ],
+			"obj-5" : [ "Frequency", "Frequency", 0 ],
 			"obj-38" : [ "Clear[5]", "Clear", 0 ],
 			"obj-51" : [ "Clear[3]", "Clear", 0 ],
-			"obj-4" : [ "Gian", "Gian", 0 ],
+			"obj-23" : [ "Clear[2]", "Clear", 0 ],
+			"obj-21" : [ "Clear", "Clear", 0 ],
 			"obj-37" : [ "Clear[4]", "Clear", 0 ],
-			"obj-5" : [ "Frequency", "Frequency", 0 ],
-			"obj-21" : [ "Clear", "Clear", 0 ]
+			"obj-40" : [ "Clear[6]", "Clear", 0 ],
+			"obj-4" : [ "Gian", "Gian", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
 				"name" : "basic.json",
-				"bootpath" : "~/Desktop",
+				"bootpath" : "D:/Max/wavetable_editor",
 				"type" : "JSON",
 				"implicit" : 1
 			}
