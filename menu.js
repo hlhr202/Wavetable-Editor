@@ -76,8 +76,9 @@ function save(){
 		d.append("pattrstorage::slots::"+(i+1)+"::data::curve", curves[i]);
 	}
 	
-	d.export_json();
+	//d.export_json();
 	
+	outlet(2, "export")
 	outlet(2, "save", "done")
 }
 	

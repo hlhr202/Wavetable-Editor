@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 77.0, 1852.0, 929.0 ],
+		"rect" : [ 34.0, 43.0, 1360.0, 963.0 ],
 		"openrect" : [ 0.0, 0.0, 751.0, 520.0 ],
 		"editing_bgcolor" : [ 0.090196, 0.090196, 0.090196, 1.0 ],
 		"bglocked" : 0,
@@ -27,7 +27,7 @@
 		"toptoolbarpinned" : 0,
 		"righttoolbarpinned" : 0,
 		"bottomtoolbarpinned" : 0,
-		"toolbars_unpinned_last_save" : 0,
+		"toolbars_unpinned_last_save" : 2,
 		"tallnewobj" : 0,
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
@@ -40,6 +40,106 @@
 		"subpatcher_template" : "",
 		"title" : "Wavetable Editor",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 622.0, 529.0, 44.0, 22.0 ],
+					"style" : "",
+					"text" : "export"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 599.0, 461.0, 75.0, 22.0 ],
+					"style" : "",
+					"text" : "route export"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"data" : 					{
+						"pattrstorage" : 						{
+							"name" : "table",
+							"slots" : 							{
+								"1" : 								{
+									"name" : "Square",
+									"id" : 1,
+									"data" : 									{
+										"curve" : [ 1024, -1, 1, 0, -1, 0, 0, 512, -1, 0, 0, 512, 1, 0, 0, 1024, 1, 0, 0, "curve" ]
+									}
+
+								}
+,
+								"2" : 								{
+									"name" : "Reverse-Saw",
+									"id" : 2,
+									"data" : 									{
+										"curve" : [ 1024, -1, 1, 0, 1, 0, 0, 1024, -1, 0, 0, "curve" ]
+									}
+
+								}
+,
+								"3" : 								{
+									"name" : "Saw",
+									"id" : 3,
+									"data" : 									{
+										"curve" : [ 1024, -1, 1, 0, -1, 0, 0, 1024, 1, 0, 0, "curve" ]
+									}
+
+								}
+,
+								"4" : 								{
+									"name" : "Triangle",
+									"id" : 4,
+									"data" : 									{
+										"curve" : [ 1024, -1, 1, 0, -1, 0, 0, 513.822082, 1, 0, 0, 1024, -1, 0, 0, "curve" ]
+									}
+
+								}
+,
+								"5" : 								{
+									"name" : "Sine",
+									"id" : 5,
+									"data" : 									{
+										"curve" : [ 1024, -1, 1, 0, -1, 0, 0, 256, 0, 0, 0.6, 512, 1, 0, -0.6, 768, 0, 0, 0.6, 1024, -1, 0, -0.6, "curve" ]
+									}
+
+								}
+
+							}
+
+						}
+,
+						"version" : "1.11"
+					}
+,
+					"id" : "obj-18",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 4,
+					"outlettype" : [ "dictionary", "", "", "" ],
+					"patching_rect" : [ 451.0, 467.0, 55.0, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 1,
+						"parameter_enable" : 0
+					}
+,
+					"style" : "",
+					"text" : "dict json"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "message",
@@ -54,19 +154,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 722.0, 502.0, 60.0, 22.0 ],
-					"style" : "",
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-2",
 					"maxclass" : "message",
 					"numinlets" : 2,
@@ -75,24 +162,6 @@
 					"patching_rect" : [ 268.0, 133.0, 41.0, 22.0 ],
 					"style" : "",
 					"text" : "dump"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 4,
-					"outlettype" : [ "dictionary", "", "", "" ],
-					"patching_rect" : [ 722.0, 562.0, 55.0, 22.0 ],
-					"saved_object_attributes" : 					{
-						"embed" : 0,
-						"parameter_enable" : 0
-					}
-,
-					"style" : "",
-					"text" : "dict json"
 				}
 
 			}
@@ -1180,7 +1249,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"patching_rect" : [ 1505.5, 619.0, 69.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 34, 77, 1886, 1006, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "window", "flags", "grow", "close", "zoom", "nofloat", "menu", "minimize", ";", "#Q", "window", "constrain", 50, 50, 32768, 32768, ";", "#Q", "window", "size", 34, 43, 1394, 1006, ";", "#Q", "window", "title", ";", "#Q", "window", "exec", ";", "#Q", "savewindow", 1, ";", "#Q", "end", ";" ],
 					"style" : "",
 					"text" : "thispatcher"
 				}
@@ -2212,10 +2281,10 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
+					"destination" : [ "obj-18", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-18", 0 ]
+					"source" : [ "obj-19", 0 ]
 				}
 
 			}
@@ -2415,7 +2484,7 @@
 					"destination" : [ "obj-31", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
-					"source" : [ "obj-40", 1 ]
+					"source" : [ "obj-40", 0 ]
 				}
 
 			}
@@ -2529,6 +2598,15 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -2559,6 +2637,17 @@
 					"destination" : [ "obj-55", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
+					"order" : 0,
+					"source" : [ "obj-61", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"order" : 1,
 					"source" : [ "obj-61", 2 ]
 				}
 
@@ -2687,14 +2776,14 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-5" : [ "Frequency", "Frequency", 0 ],
-			"obj-37" : [ "Clear[4]", "Clear", 0 ],
-			"obj-51" : [ "Clear[3]", "Clear", 0 ],
-			"obj-4" : [ "Gian", "Gian", 0 ],
-			"obj-21" : [ "Clear", "Clear", 0 ],
 			"obj-38" : [ "Clear[5]", "Clear", 0 ],
 			"obj-23" : [ "Clear[2]", "Clear", 0 ],
-			"obj-40" : [ "Clear[6]", "Clear", 0 ]
+			"obj-4" : [ "Gian", "Gian", 0 ],
+			"obj-40" : [ "Clear[6]", "Clear", 0 ],
+			"obj-37" : [ "Clear[4]", "Clear", 0 ],
+			"obj-51" : [ "Clear[3]", "Clear", 0 ],
+			"obj-21" : [ "Clear", "Clear", 0 ],
+			"obj-5" : [ "Frequency", "Frequency", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
