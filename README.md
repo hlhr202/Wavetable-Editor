@@ -10,6 +10,9 @@ Current version supports both windows and macos platform.
 
   ![Screenshot](Wavetable%20Editor.png?raw=true "Screenshot")
 
+- Changelog:
+  version 1.11 (16.May.2017), prepare support for PowerSynth, add version check in preset file
+  
 - Download:
 
   https://github.com/hlhr202/Wavetable-Editor/releases
